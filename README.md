@@ -26,6 +26,7 @@ I created a helper function called `list_to_dictionary` that takes the results f
 Lastly, I set up error handling in the case where no classes were provided.
 
 **Topological Sort**
+
 Once I had my properly formatted dictionary of courses and prerequisites, it was time to figure out how to get the proper order! It helped me to visualize the list of courses and prerequisites as a graph, where each course was connected to other courses by prerequisite relationships.
 
 ## Testing
