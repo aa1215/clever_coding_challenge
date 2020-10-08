@@ -84,5 +84,5 @@ Lastly, the time complexity for my solution is calculated as follows:
 `for i in classes_dict: vertices.append(i)`: O(n) where n = number of classes in the input (same as number of classes in classes_dict)
 `topological_sort(start, visited, sort)`: O(n+p) where n = number of classes (same as number of vertices in our graph) and p = number of prerequisites 
 
-Thus, our total time complexity is equal to O(2n+p) where n = number of classes and p = number of prerequisites.
+Thus, our total time complexity is equal to O(n) + O(n) + O(n+p) which simplifies to O(n+p) where n = number of classes and p = number of prerequisites.
 
