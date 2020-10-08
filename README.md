@@ -52,17 +52,17 @@ There were some test cases that I considered when testing my program.
 
     If the input JSON file is empty, the program will output an error message: `Error: Please enter at least one class.`
     
-2. 1 course provided with no prerequisites
+3. 1 course provided with no prerequisites
 
-This case is handled in the topological sort - it will just print out the course. 
+    This case is handled in the topological sort - it will just print out the course. 
 
-3. 1 course with prerequisites
-4. Prerequisites are not in the course_list
-5. `math.json`, `physics.json`: Provided test cases
+4. `math.json`, `physics.json`: Provided test cases
 
-The program provides a correct ordering for each of these test cases.
+    The program provides a correct ordering for each of these test cases.
 
 ## Considerations and Future Improvements
+
+
 
 ## Time Complexity
 
