@@ -19,6 +19,10 @@ Lastly, I set up error handling in case the file provided was not a .json file. 
 
 **Data Formatting** 
 
+The next step was to load the JSON data. I used the `json` library along with the `json.load` function to load the data from the JSON file. The data is presented as a list of dictionaries of lists, but I figured it would be simpler to just have a dictionary of lists. 
+
+I created a helper function called `list_to_dictionary` that takes the results from `json.load` and converts it into a simpler dictionary.
+
 ## Testing
 
 ## Considerations and Future Improvements
