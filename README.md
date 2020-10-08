@@ -2,7 +2,7 @@
 This is my submission for the Clever SWE Intern 2021 Coding Challenge. This program finds an order that a student can take each of the courses provided where all the prerequisites are satisfied.
 
 ## Prerequisites + Installation
-This program submission does not require compilation. The program can be run easily through:
+This program submission does not require compilation. The program can be run through these commands:
 ```bash
 cd clever_coding_challenge
 ./scheduler math.json
@@ -28,6 +28,8 @@ Lastly, I set up error handling in the case where no classes were provided.
 **Topological Sort**
 
 Once I had my properly formatted dictionary of courses and prerequisites, it was time to figure out how to get the proper order! It helped me to visualize the list of courses and prerequisites as a graph, where each course was connected to other courses by prerequisite relationships.
+
+More specifically, the input dictionary 
 
 ## Testing
 
