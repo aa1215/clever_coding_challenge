@@ -29,7 +29,10 @@ Lastly, I set up error handling in the case where no classes were provided.
 
 Once I had my properly formatted dictionary of courses and prerequisites, it was time to figure out how to get the proper order! It helped me to visualize the list of courses and prerequisites as a graph, where each course was connected to other courses by prerequisite relationships.
 
-More specifically, the input dictionary 
+More specifically, the input dictionary is a directed acyclic graph. The direction of courses can only flow in one direction and the course ordering cannot be scheduling. i.e. this example is not possible:
+`calculus --> multivariable calculus --> calculus`
+
+It wouldn't make sense for a class to be a prerequisite for it's prerequisite class, so we know that we can represent our schedule of courses as a directed acyclic graph.
 
 ## Testing
 
