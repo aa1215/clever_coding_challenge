@@ -1,1 +1,2 @@
-# clever_coding_challenge
+# Clever Coding Challenge
+## Akshara Anand
