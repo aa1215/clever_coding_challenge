@@ -67,7 +67,7 @@ Another case I considered as I wrote my program was the case where a prerequisit
 Since statistics is not in this course dictionary, I was not sure if this was in the scope of this problem. However, if we wanted to expand on this program to add handling for this condition, I would add a condition into topological sort, where if a prerequisite was not in the vertices (list of keys in the course dictionary), it would be automatically ordered right before the class. 
 `ordering: calculus, statistics, multivariable calculus` 
 
-I think it would be interesting to also add a condition to handle permission codes. At my university, you can obtain a permission number to skip a course prerequisite. If we were to visualize a prerequisite as an asterisk, then the pseudocode would be:
+I think it would be interesting to also add a condition to handle permission codes. At my university, you can obtain a permission number to skip a course prerequisite. We could input a list of courses with permission codes along with a course dictionary, and then remove each prerequisite in the list of permission codes from the course dictionary.
 ~~~~
 for i in course_dict:
         prerequisites = course_dict[i]
@@ -77,4 +77,12 @@ for i in course_dict:
 
 
 ## Time Complexity
+
+Lastly, the time complexity for my solution is calculated as follows:
+
+`list_to_dict(classes)`: O(n) where n = number of classes in the input
+`for i in classes_dict: vertices.append(i)`: O(n) where n = number of classes in the input (same as number of classes in classes_dict)
+`topological_sort(start, visited, sort)`: O(n+p) where n = number of classes (same as number of vertices in our graph) and p = number of prerequisites 
+
+Thus, our total time complexity is equal to O(2n+p) where n = number of classes and p = number of prerequisites.
 
