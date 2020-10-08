@@ -45,6 +45,7 @@ Once I obtained my list of ordered courses, I simply printed out every course in
 There were some test cases that I considered when testing my program.
 
 1. `wronginput.java` Wrong input file type
+
     test
 
 2. Empty JSON file (i.e. no courses provided)
