@@ -1,8 +1,8 @@
 # Clever Coding Challenge
-This is my submission for the Clever SWE Intern 2021 Coding Challenge. Imagine you are a student and you have a list of courses you want to take. Many of these courses have prerequisites which you must take before you can take that course. This program finds an order that you can take each of the courses where all the prerequisites are satisfied.
+This is my submission for the Clever SWE Intern 2021 Coding Challenge. This program finds an order that a student can take each of the courses provided where all the prerequisites are satisfied.
 
 ## Prerequisites + Installation
-This program contains an executable inside of `clever_coding_challenge/distr`. The program can be run easily through:
+This program submission does not require compilation. The program can be run easily through:
 ```bash
 cd clever_coding_challenge
 ./scheduler math.json
