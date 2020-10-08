@@ -48,13 +48,19 @@ There were some test cases that I considered when testing my program.
 
     If the user provides a wrong file type (i.e. not a JSON file), the program will output an error message: `Error: Please enter a proper .json file.` and quit the program.
 
-2. Empty JSON file (i.e. no courses provided)
+2. `empty.json`: Empty JSON file (i.e. no courses provided)
 
-    If the input JSON file is empty, the program will output an error message: `Error: Please enter at least one class.`.
-2. 1 course provided with prerequisites
+    If the input JSON file is empty, the program will output an error message: `Error: Please enter at least one class.`
+    
+2. 1 course provided with no prerequisites
+
+This case is handled in the topological sort - it will just print out the course. 
+
 3. 1 course with prerequisites
 4. Prerequisites are not in the course_list
-5. Provided test cases
+5. `math.json`, `physics.json`: Provided test cases
+
+The program provides a correct ordering for each of these test cases.
 
 ## Considerations and Future Improvements
 
