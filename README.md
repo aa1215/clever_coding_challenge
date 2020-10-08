@@ -68,10 +68,12 @@ Since statistics is not in this course dictionary, I was not sure if this was in
 `ordering: calculus, statistics, multivariable calculus` 
 
 I think it would be interesting to also add a condition to handle permission codes. At my university, you can obtain a permission number to skip a course prerequisite. If we were to visualize a prerequisite as an asterisk, then the pseudocode would be:
-`` for i in course_dict:
+~~~~
+for i in course_dict:
         prerequisites = course_dict[i]
         for j in prerequisites:
-            if j.contains('*') then remove it from the prerequisites```
+            if j.contains('*') then remove it from the prerequisites
+~~~~
 
 
 ## Time Complexity
