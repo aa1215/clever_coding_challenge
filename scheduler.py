@@ -8,23 +8,26 @@ else:
     json_file = sys.argv[1]
 
 if json_file == "" and len(sys.argv) < 2:
-    print("Error: No argument provided.", file=sys.stderr)
+    print("Error: Please enter a proper .json file.", file=sys.stderr)
     quit()
 
 if json_file.find(".") == -1:
-	print("Error: No argument provided.", file=sys.stderr)
+	print("Error: Please enter a proper .json file.", file=sys.stderr)
 	quit()
 
 else:
 	file_extension = json_file.split(".")[1]
 
 if file_extension != "json":
-	print("Error: No argument provided.", file=sys.stderr)
+	print("Error: Please enter a proper .json file.", file=sys.stderr)
 	quit()
 
 with open(json_file) as f:
 	classes = json.load(f)
 
+if classes == []:
+    print("Error: Please enter at least one class.", file=sys.stderr)
+    quit()
 
 def list_to_dict(classes):
     classes_dict = {}
@@ -32,11 +35,7 @@ def list_to_dict(classes):
         classes_dict[classes[i].get('name')] = classes[i].get('prerequisites')
     return classes_dict
 
-
 classes_dict = list_to_dict(classes)
-
-current_list = []
-
 vertices = []
 for i in classes_dict:
 	vertices.append(i)
