@@ -9,25 +9,25 @@ else:
 
 if json_file == "" and len(sys.argv) < 2:
     print("Error: Please enter a proper .json file.", file=sys.stderr)
-    quit()
+    sys.exit()
 
 if json_file.find(".") == -1:
 	print("Error: Please enter a proper .json file.", file=sys.stderr)
-	quit()
+	sys.exit()
 
 else:
 	file_extension = json_file.split(".")[1]
 
 if file_extension != "json":
 	print("Error: Please enter a proper .json file.", file=sys.stderr)
-	quit()
+	sys.exit()
 
 with open(json_file) as f:
 	classes = json.load(f)
 
 if classes == []:
     print("Error: Please enter at least one class.", file=sys.stderr)
-    quit()
+    sys.exit()
 
 def list_to_dict(classes):
     classes_dict = {}
