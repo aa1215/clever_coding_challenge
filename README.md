@@ -42,6 +42,15 @@ Once I obtained my list of ordered courses, I simply printed out every course in
 
 ## Testing
 
+There were some test cases that I considered when testing my program.
+
+1. Wrong input file type
+2. Empty JSON file (i.e. no courses provided)
+2. 1 course provided with prerequisites
+3. 1 course with prerequisites
+4. Prerequisites are not in the course_list
+5. Provided test cases
+
 ## Considerations and Future Improvements
 
 ## Time Complexity
