@@ -30,9 +30,15 @@ Lastly, I set up error handling in the case where no classes were provided.
 Once I had my properly formatted dictionary of courses and prerequisites, it was time to figure out how to get the proper order! It helped me to visualize the list of courses and prerequisites as a graph, where each course was connected to other courses by prerequisite relationships.
 
 More specifically, the input dictionary is a directed acyclic graph. The direction of courses can only flow in one direction and the course ordering cannot be scheduling. i.e. this example is not possible:
-`calculus --> multivariable calculus --> calculus`
+`calculus -> multivariable calculus -> calculus`
 
-It wouldn't make sense for a class to be a prerequisite for it's prerequisite class, so we know that we can represent our schedule of courses as a directed acyclic graph.
+It wouldn't make sense for a class to be a prerequisite for it's prerequisite, so we know that we can represent our schedule of courses as a directed acyclic graph. 
+
+I spent some time looking through the input dictionary and then understood that for each course in the dictionary, I needed to find a way to ensure that the elements in its prerequisite list were ordered before the list. I thought about a few possibilities, such as breadth-first search, depth-first search, and then remembered an algorithm I had learned in my algorithms class: topological sort.
+
+Topological sort is a sorting algorithm that is a modified version of depth-first search. For a linear ordering of vertices, for each vertice `[a,[b,c]]` the elements b and c come before a in the ordering. Since my courses dictionary was in the proper format that I needed for topological sort, I implemented a topological sort function that takes in a starting course and outputs a list of ordered courses.
+
+Once I obtained my list of ordered courses, I simply printed out every course in this list of ordered courses for the final output.
 
 ## Testing
 
