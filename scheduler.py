@@ -1,14 +1,15 @@
 import json
 import sys
 
-# error handling for cases where no file is presented or file is the wrong file type
 if len(sys.argv) < 2:
-	# go through and change these to standard error
-	print("Error: No argument provided.", file=sys.stderr)
-	quit()
-
+    print("Please enter your file path.")
+    json_file = input()
 else:
-	json_file = sys.argv[1]
+    json_file = sys.argv[1]
+
+if json_file == "" and len(sys.argv) < 2:
+    print("Error: No argument provided.", file=sys.stderr)
+    quit()
 
 if json_file.find(".") == -1:
 	print("Error: No argument provided.", file=sys.stderr)
@@ -24,9 +25,15 @@ if file_extension != "json":
 with open(json_file) as f:
 	classes = json.load(f)
 
-classes_dict = {}
-for i in range(0, len(classes)):
-	classes_dict[classes[i].get('name')] = classes[i].get('prerequisites')
+
+def list_to_dict(classes):
+    classes_dict = {}
+    for i in range(0, len(classes)):
+        classes_dict[classes[i].get('name')] = classes[i].get('prerequisites')
+    return classes_dict
+
+
+classes_dict = list_to_dict(classes)
 
 current_list = []
 
